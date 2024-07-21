@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Scientific Calculator</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <h1>Calculator</h1>
+
+        <div class="container">
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="display" disabled />
+                </div>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="append('(')">(</button>
+                <button onclick="append(')')">)</button>
+                <button onclick="append('7')">7</button>
+                <button onclick="append('8')">8</button>
+                <button onclick="append('9')">9</button>
+                <button onclick="append('/')">/</button>
+                <button onclick="append('4')">4</button>
+                <button onclick="append('5')">5</button>
+                <button onclick="append('6')">6</button>
+                <button onclick="append('*')">*</button>
+                <button onclick="append('1')">1</button>
+                <button onclick="append('2')">2</button>
+                <button onclick="append('3')">3</button>
+                <button onclick="append('-')">-</button>
+                <button onclick="append('0')">0</button>
+                <button onclick="append('.')">.</button>
+                <button onclick="append('+')">+</button>
+                <button onclick="calculate()">=</button>
+
+            </div>
+            <div class="calculator2">
+                <div class="Triangle" onclick="openModal('triangle')">
+                    <h1>Area of Triangle</h1>
+                </div>
+                <div class="Circle" onclick="openModal('circle')">
+                    <h1>Area of Circle</h1>
+                </div>
+                <div class="Rectangle" onclick="openModal('rectangle')">
+                    <h1>Area of Rectangle</h1>
+                </div>
+                <div class="Square" onclick="openModal('square')">
+                    <h1>Area of Square</h1>
+                </div>
+                <div class="Cylinder" onclick="openModal('cylinder')">
+                    <h1>Volume of Cylinder</h1>
+                </div>
+                <div class="Cone" onclick="openModal('cone')">
+                    <h1>Volume of Cone</h1>
+                </div>
+                <div class="Sphere" onclick="openModal('sphere')">
+                    <h1>Volume of Sphere</h1>
+                </div>
+                <div class="Cube" onclick="openModal('cube')">
+                    <h1>Volume of Cube</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal">
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+            <button onclick="calculateShape()">Calculate</button>
+        </div>
+
+        <div class="overlay" id="overlay" onclick="closeModal()"></div>
+    
+    </body>
+    <script src="index.js"></script>
+</html>
